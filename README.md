@@ -16,17 +16,23 @@
 
 2. Create a app bot token key at [Discord Developers](https://discordapp.com/developers/applications/me)
 
-./token.json
-```json
+./config.js
+```javascript
 {
-  "value" : "yourtokenvaluehere"
+    anonymousAccounts: true,
+    discord: {
+        prefix: '!', // Prefix to be used with the Discord Bot
+        token: '', // Discord Bot Token
+        tweetChannel: '' // the channel ID which tweets from ingame will go to
+    },
+    mysql: {
+        host     : 'localhost',
+        user     : 'root',
+        password : '',
+        database : 'adren_scripts',
+        table    : 'twitteraccounts'
+    }
 }
-```
-
-3. Run the following in terminal
-
-```bash
-$ node index.js
 ```
 
 ## Screenshots
