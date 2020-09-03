@@ -3,8 +3,10 @@
 
 <h1>Screenshots</h1>
 <img src="https://i.imgur.com/wRo841E.jpeg" alt="">
+<img src="https://i.imgur.com/ceGQlea.png" alt="">
 <p>Tweet from FiveM Chat</p>
 
-<img src="https://i.imgur.com/wRo841E.jpeg" alt="">
-<p>Tweet from FiveM Chat</p>
+<img src="https://i.imgur.com/3SpdB1f.png" alt="">
+<img src="https://i.imgur.com/sSMfxCt.png" alt="">
+<p>Tweet command from Discord</p>
 
