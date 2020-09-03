@@ -3,22 +3,14 @@
 
 ## Installation
 #### FiveM Setup
-1. Clone repository
+1. CD Into the folder *Not while the FXServer is started!*
 
-2. Create a app bot token key at [Discord Developers](https://discordapp.com/developers/applications/me)
+2. Type ```npm i```
 
-./token.json
-```json
-{
-  "value" : "yourtokenvaluehere"
-}
-```
+3. Run the SQL File into your MySQL Server.
 
-3. Run the following in terminal
+4. Edit the config with your MySQL Details
 
-```bash
-$ node index.js
-```
 #### Discord Bot Installation 
 1. Clone repository
 
