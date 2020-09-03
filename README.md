@@ -16,7 +16,7 @@
 
 2. Create a app bot token key at [Discord Developers](https://discordapp.com/developers/applications/me)
 
-./config.js
+3. Edit ```./config.js``` file with your config details
 ```javascript
 {
     anonymousAccounts: true,
