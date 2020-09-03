@@ -16,23 +16,25 @@ RegisterCommand('tweet', (source, raw) => {
     }
 }, false);
 
-RegisterCommand('anontweet', (source, raw) => {
-    let args = raw.join(" ");
-    let steam = GetPlayerIdentifier(source);
+if (config.anonymousAccounts == true) {
+    RegisterCommand('anontweet', (source, raw) => {
+        let args = raw.join(" ");
+        let steam = GetPlayerIdentifier(source);
 
-    if (args) {
-        connection.query(`SELECT username FROM ${config.mysql.table} WHERE identifier='${steam}'`, function (error, results, fields) {
-            if (!results[0]) returnutilts.notify(emitNet, source, '~r~You do not have a username set!');
+        if (args) {
+            connection.query(`SELECT username FROM ${config.mysql.table} WHERE identifier='${steam}'`, function (error, results, fields) {
+                if (!results[0]) returnutilts.notify(emitNet, source, '~r~You do not have a username set!');
 
-            setImmediate(()=>{
-                utilts.tweet(args, 'AnonymousUser#' + utilts.AnnUserNum(), 'anon');
-                utilts.notify(emitNet, source, '~r~Anonymous Tweet Posted!');
-            })   
-        });
-    } else {
-       utilts.notify(emitNet, source, '~r~Please input your message!');
-    }
-}, false);
+                setImmediate(()=>{
+                    utilts.tweet(args, 'AnonymousUser#' + utilts.AnnUserNum(), 'anon');
+                    utilts.notify(emitNet, source, '~r~Anonymous Tweet Posted!');
+                })   
+            });
+        } else {
+        utilts.notify(emitNet, source, '~r~Please input your message!');
+        }
+    }, false);
+}
 
 RegisterCommand('setUsername', (source, raw) => {
     let args = raw.join(" ");
